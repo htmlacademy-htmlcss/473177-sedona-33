@@ -1,0 +1,285 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/ptsans-400.woff2") format("woff.2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/ptsans-700.woff2") format("woff.2");
+    font-display: swap;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.navigation .button {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.button-brown {
+    color: #FFFFFF;
+    background: #756257;
+}
+
+.button-blue {
+    color: #FFFFFF;
+    background: #83B3D3;
+}
+
+.button {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: "PT Sans";
+}
+
+.main-index {
+    background-image: url("../images/index-background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+.promo-text {
+    font-size: 22px;
+    line-height: 36px;
+    text-align: center;
+    color: #333333;
+}
+
+.promo-bold {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+}
+
+.advantages-item {
+     background: rgba(131, 179, 211, 0.12);
+     text-align: center;
+}
+
+.advantages-item:nth-child(2), .advantages-item:first-child {
+    color: #FFFFFF;
+    background: #83B3D3;
+}
+
+.advantages-item:nth-child(4) {
+    background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-title, .advantages-city-title {
+    font-size: 24px;
+    line-height: 28px;
+ }
+
+.advantages-description, .advantages-city-description {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.advantages-city-list {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-city-item {
+    background: rgba(131, 179, 211, 0.12);
+    color: #000000;
+}
+
+.advantages-city-item:nth-child(2) {
+    background: #FFFFFF;
+}
+
+.interested-title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.interested-description {
+    font-size: 22px;
+    text-align: center;
+    color: #333333;
+}
+
+.interested-button {
+    line-height: 36px;
+}
+
+.subscription {
+    background-image: url("../images/background-footer.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.subscription-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subscription-text {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.subscription-button {
+    font-family: "PT Sans";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.footer-contacts-phone {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+}
+
+.catalog-footer .subscription{
+    background: none;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.catalog-footer p {
+    color: #333333;
+}
+
+.inner-header {
+    background: url("../images/catalog-background.jpg");
+    background-color: #000000;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-header-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+}
+
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.control {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.catalog-filter button {
+    font-family: "PT Sans";
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.catalog-filter-button-reset {
+    background: transparent;
+}
+
+.catalog-products-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    text-transform: uppercase;
+}
+
+.select-control {
+    font-family: "PT Sans";
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+}
+
+.product-card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.product-card-type-of-housing, .product-card-price {
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333
+}
+
+.button-more, .button-favourites {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.product-card-rating {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.button-favourites-current {
+    background: #7DB54F;
+}
+
+.pagination-show-more {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.pagination-link {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #83B3D3;
+    text-align: center;
+}
+
+.pagination-current {
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.count-items {
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+}
