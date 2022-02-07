@@ -135,6 +135,12 @@ body {
     color: #FFFFFF;
     background: #83B3D3;
     width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-item-wrapper {
+  width: 400px;
 }
 
 .advantages-item:nth-child(4) {
