@@ -26,9 +26,20 @@ body {
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;
-    background: #FFFFFF;
+    background: #E5E5E5;
     color: #000000;
 }
+
+/*.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
 
 .main-container {
   flex-grow: 1;
@@ -96,6 +107,7 @@ body {
 .page-container {
   margin: 0 auto;
   width: 1200px;
+  background-color: #FFFFFF;
 }
 
 .promo-logo {
@@ -222,8 +234,6 @@ body {
 }
 
 .footer-container {
-  width: 1200px;
-  margin: 0 auto;
   display: flex;
 }
 
