@@ -136,29 +136,31 @@
           </section>
         </section>
         <section class="catalog-products">
-          <h2 class="catalog-products-title">
-            Найдено гостиниц: 38
-          </h2>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="cheap">
-              Сначала дешёвые
-            </option>
-          </select>
-          <a href="#" class="button button-current">
-            <span class="visually-hidden">
-              Показать карточки
-            </span>
-          </a>
-          <a href="#" class="button button-current">
-            <span class="visually-hidden">
-              Показать карточки с описанием
-            </span>
-          </a>
-          <a href="#" class="button button-current">
-            <span class="visually-hidden">
-              Показать список
-            </span>
-          </a>
+          <div class="catalog-products-wrapper">
+            <h2 class="catalog-products-title">
+              Найдено гостиниц: 38
+            </h2>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">
+                Сначала дешёвые
+              </option>
+            </select>
+            <a href="#" class="button button-current">
+              <span class="visually-hidden">
+                Показать карточки
+              </span>
+            </a>
+            <a href="#" class="button">
+              <span class="visually-hidden">
+                Показать карточки с описанием
+              </span>
+            </a>
+            <a href="#" class="button">
+              <span class="visually-hidden">
+                Показать список
+              </span>
+            </a>
+          </div>
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
@@ -268,44 +270,46 @@
           <button class="button pagination-show-more button-blue">
             Загрузить ещё
           </button>
-          <ol class="pagination">
-            <li class="pagination_item">
-              <a class="pagination-link pagination-current">
-                1
-              </a>
-            </li>
-            <li class="pagination_item">
-              <a class="pagination-link" href="#">
-                2
-              </a>
-            </li>
-            <li class="pagination_item">
-              <a class="pagination-link" href="#">
-                3
-              </a>
-            </li>
-            <li class="pagination_item">
-              <a class="pagination-link" href="#">
-                4
-              </a>
-            </li>
-            <li class="pagination_item">
-              <a class="pagination-link" href="#">
-                ...
-              </a>
-            </li>
-            <li class="pagination_item">
-              <a class="pagination-link" href="#">
-                10
-              </a>
-            </li>
-          </ol>
-          <label class="count-items" for="count-items">
-            Гостиниц на странице:
-          </label>
-          <select id="count-items" class="select-control">
-            <option value="4" selected>4</option>
-          </select>
+          <div class="pagination-container">
+            <ol class="pagination">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-current">
+                  1
+                </a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">
+                  2
+                </a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">
+                  3
+                </a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">
+                  4
+                </a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">
+                  ...
+                </a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">
+                  10
+                </a>
+              </li>
+            </ol>
+            <label class="count-items" for="count-items">
+              Гостиниц на странице:
+            </label>
+            <select id="count-items" class="select-control">
+              <option value="4" selected>4</option>
+            </select>
+          </div>
         </section>
       </main>
       <footer class="page-footer catalog-footer">
