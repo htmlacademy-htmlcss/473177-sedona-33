@@ -77,6 +77,7 @@ body {
     text-align: center;
     display: block;
     padding: 20px 17px 19px 17px;
+    position: relative;
 }
 
 .navigation-link:hover {
@@ -87,6 +88,16 @@ body {
   color: rgba(117, 98, 87, 0.3);
 }
 
+.navigation-link-current::before {
+  position: absolute;
+  content: "";
+  right: 17px;
+  height: 2px;
+  left: 17px;
+  bottom: 0;
+  background-color: #756257;
+}
+
 .navigation-user {
   max-width: 320px;
   margin-left: auto;
@@ -94,9 +105,10 @@ body {
 }
 
 .navigation-user .navigation-link {
-  min-width: 18px;
+  min-width: 42px;
   min-height: 18px;
   position: relative;
+  padding: 0;
 }
 
 .navigation-icon {
@@ -118,13 +130,20 @@ body {
   fill: rgba(117, 98, 87, 0.3);
 }
 
-.navigation-icon-fav::after {
-  content: '12';
+.navigation-icon::after {
+  content: "12";
+  color:#FFFFFF;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.1em;
   background-color: #7DB550;
+  border-radius: 10px;
+  padding: 2.5px 0.5px 4.5px 0.5px;
   position: absolute;
+  top: 0;
 }
 
-.button-want-here {
+.navigation-user .button {
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -380,7 +399,7 @@ body {
     font-size: 22px;
     text-align: center;
     color: #333333;
-    width:720px;
+    width: 720px;
     margin: 0 auto 56px auto;
 }
 
@@ -389,8 +408,8 @@ body {
     width: 575px;
     padding: 15px 0 15px 0;
     border-radius: 10px;
-    position: relative;
-    left: 312px;
+    display: block;
+    margin: 0 auto;
 }
 
 .subscription {
@@ -577,12 +596,56 @@ body {
   flex-wrap: wrap;
 }
 
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  position:absolute;
+  background-image: url("../images/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 8px;
+  top: 6px;
+  right: 10px;
+  opacity: 0.3;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
     text-decoration: none;
     color: #FFFFFF;
     margin-right: 26px;
+}
+
+.breadcrumbs-item:first-child .breadcrumbs-link{
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/breadcrumbs-home.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 12px 12px;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus {
+  border: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
 }
 
 .control {
@@ -621,19 +684,56 @@ body {
 }
 
 .catalog-filter-buttons {
+  margin-top: auto;
   margin-left: auto;
+
 }
 
 .catalog-filter button {
     font-family: "PT Sans";
     color: #FFFFFF;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 21px;
+    display: block;
+}
+
+.catalog-filter-button-submit {
+  width: 160px;
+  height: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-button-submit:focus {
+  background: #68A2CA;
+  border: 3px solid #FFFFFF;
+  border-radius: 4px;
 }
 
 .catalog-filter-button-reset {
-    background: transparent;
+  background: transparent;
+  width: 160px;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.catalog-filter-button-reset:hover {
+  opacity: 0.6;
+  background: transparent;
+}
+
+.catalog-filter-button-reset:focus {
+  border: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.catalog-filter-button-reset:active {
+  opacity: 0.3;
+  background: transparent;
 }
 
 .catalog-products {
@@ -664,11 +764,35 @@ body {
     margin-right: 81px;
 }
 
-.catalog-products-wrapper .button {
-  background-color: grey;
+.card-toggle {
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
   width: 48px;
   height: 48px;
   margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-toggle:nth-of-type(1) {
+  background-image: url("../images/view-mode-1.svg");
+}
+
+.card-toggle:nth-of-type(2) {
+  background-image: url("../images/view-mode-2.svg");
+}
+
+.card-toggle:nth-of-type(3) {
+  background-image: url("../images/view-mode-3.svg");
+}
+
+.card-toggle:hover, .card-toggle:focus {
+  border: 2px solid #83B3D3;
+}
+
+.card-toggle-current, .card-toggle:active {
+  border: 2px solid #000000;
 }
 
 .product-list {
@@ -685,6 +809,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: relative;
 }
 
 .product-card-wrapper {
@@ -700,6 +825,18 @@ body {
 
 .product-card-image {
   margin-bottom: 16px;
+}
+
+.product-card-image:hover {
+  opacity: 0.6;
+}
+
+.product-card-image:focus {
+  border: 3px solid #83B3D3;
+}
+
+.product-card-image:active {
+  opacity: 0.3;
 }
 
 .product-card-title {
@@ -720,6 +857,19 @@ body {
 .button-more, .button-favourites {
     font-size: 16px;
     line-height: 21px;
+    padding: 9px 0 10px 0;
+}
+
+.product-card-wrapper-stars {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  width: 18px;
+  height: 17px;
+  background-image: url("../images/star.svg");
+  margin-right: 7px;
 }
 
 .product-card-rating {
@@ -739,13 +889,38 @@ body {
     background: #7DB54F;
 }
 
+.button-favourites-current:hover {
+  background: #6C9E42;
+}
+
+.button-favourites-current:focus {
+  background: #6C9E42;
+  border: 3px solid #756257;
+}
+
+.button-favourites-current:active {
+  background: #6C9E42;
+  opacity: 0.3;
+}
+
 .pagination-show-more {
     font-size: 20px;
     line-height: 26px;
+    width: 620px;
+    padding: 17px 0 17px 0;
+    display: block;
+    margin: 30px auto 30px auto;
+    position: relative;
+}
+
+.pagination-show-more-wrapper {
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .pagination-container {
   display: flex;
+  padding-top: 30px;
 }
 
 .pagination {
@@ -777,9 +952,38 @@ body {
     border-radius: 4px;
 }
 
+.pagination-link:hover {
+  background: #68A2CA;
+}
+
+.pagination-link:focus {
+  background: #68A2CA;
+  border: 3px solid #756257;
+}
+
+.pagination-link:active {
+    background: #68A2CA;
+    opacity: 0.3;
+}
+
 .pagination-current {
     color: #000000;
     background-color: #F2F2F2;
+}
+
+.pagination-current:hover {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-current:focus {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-current:active {
+  color: #000000;
+  background-color: #F2F2F2;
 }
 
 .count-items {
