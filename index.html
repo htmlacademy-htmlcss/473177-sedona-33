@@ -244,6 +244,73 @@
           </section>
         </div>
       </footer>
+
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-search">
+          <button class="modal-close-button">
+            <span class="visually-hidden">
+              Закрыть модальное окно
+            </span>
+          </button>
+          <div class="modal-content">
+            <h2 class="modal-title">
+              Поиск гостиницы в Седоне
+            </h2>
+            <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
+              <label class="search-form-label" for="date-check-in">
+                  Дата заезда:
+              </label>
+              <div class="search-date-container">
+                <input class="field search-form-input" id="date-check-in" type="text" name="date-check-in" value="27 апреля 2020" placeholder="Укажите дату" required>
+              </div>
+              <span class="search-message search-message-error">
+                Мы не можем отправить вас в прошлое.
+              </span>
+              <label class="search-form-label" for="date-check-out">
+                Дата выезда:
+              </label>
+              <div class="search-date-container">
+                <input class="field search-form-input" id="date-check-out" type="text" name="date-check-out" placeholder="Укажите дату" value="1 сентября 2021" required>
+              </div>
+              <span class="search-message">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+              <label class="search-form-label">
+                Взрослые:
+              </label>
+              <div class="search-number-container">
+                <button class="search-number-button search-number-minus" type="submit"></button>
+                <input class="field search-form-input" type="number" name="adults" value="2">
+                <button class="search-number-button search-number-plus" type="submit"></button>
+              </div>
+              <span class="form-label-icon">
+                <label class="search-form-label search-form-label-children">
+                  Дети:
+                </label>
+                <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                  <svg class="tooltip-icon" width="1" height="9" viewBox="0 0 1 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)"><path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z"/></g>
+                    <defs><clipPath id="a"><path d="M0 0h1v9H0z"/></clipPath></defs>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+               </span>
+              </span>
+              <div class="search-number-container">
+                <button class="search-number-button search-number-minus" type="submit"></button>
+                <input class="field search-form-input" type="number" name="children" value="1">
+                <button class="search-number-button search-number-plus" type="submit"></button>
+              </div>
+              <button class="search-form-button button-blue button" type="submit">
+                Найти
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
