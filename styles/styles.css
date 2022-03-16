@@ -928,16 +928,17 @@ body {
   margin-right: auto;
 }
 
-.main-inner {
-  background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  padding: 35px 72px 0 72px;
+ .main-inner {
+  padding: 0;
 }
 
 .inner-header {
   color: #ffffff;
-  padding-bottom: 83px;
+  background-color: #000000;
+  background-image: url("../images/catalog-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 35px 72px 83px 72px;
 }
 
 .inner-header-title {
@@ -1259,7 +1260,7 @@ body {
 }
 
 .catalog-products {
-  padding-top: 44px;
+  padding: 44px 72px 0 72px;
 }
 
 .catalog-products-wrapper {
